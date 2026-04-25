@@ -53,7 +53,6 @@ public class CommandHandler extends CommandBase {
         try {
             double multiplier = Double.parseDouble(args[0]);
 
-            // 无限制版本：允许任何正数倍数
             if (multiplier <= 0) {
                 sender.sendMessage(new TextComponentString("§c倍数必须大于 0"));
                 return;

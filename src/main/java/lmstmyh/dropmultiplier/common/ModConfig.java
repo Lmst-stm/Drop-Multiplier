@@ -15,6 +15,7 @@ public class ModConfig {
     private static Configuration config;
 
     public static double DROP_MULTIPLIER = 2.0;
+    public static boolean MULTIPLIER_ENABLED = true;
     public static boolean AFFECT_EXP = true;
     public static boolean AFFECT_MOBS = true;
     public static boolean AFFECT_BLOCKS = true;
@@ -39,6 +40,14 @@ public class ModConfig {
                     "掉落倍数 (1.0 = 正常，无上限)"
             );
             DROP_MULTIPLIER = multiplierProp.getDouble();
+
+            Property enabledProp = config.get(
+                    Configuration.CATEGORY_GENERAL,
+                    "multiplierEnabled",
+                    true,
+                    "倍数是否启用 (按 . 键切换)"
+            );
+            MULTIPLIER_ENABLED = enabledProp.getBoolean();
 
             Property expProp = config.get(
                     Configuration.CATEGORY_GENERAL,
@@ -113,6 +122,13 @@ public class ModConfig {
         DROP_MULTIPLIER = value;
         Property prop = config.get(Configuration.CATEGORY_GENERAL, "dropMultiplier", 2.0);
         prop.set(value);
+        saveConfig();
+    }
+
+    public static void setEnabled(boolean enabled) {
+        MULTIPLIER_ENABLED = enabled;
+        Property prop = config.get(Configuration.CATEGORY_GENERAL, "multiplierEnabled", true);
+        prop.set(enabled);
         saveConfig();
     }
 }

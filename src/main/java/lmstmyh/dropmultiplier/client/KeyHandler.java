@@ -29,12 +29,13 @@ public class KeyHandler {
     }
 
     private void toggleMultiplier() {
-        double current = ModConfig.DROP_MULTIPLIER;
-        double newMultiplier = (current == 1.0) ? 2.0 : 1.0;
-        ModConfig.setMultiplier(newMultiplier);
+        boolean currentlyEnabled = ModConfig.MULTIPLIER_ENABLED;
+        ModConfig.setEnabled(!currentlyEnabled);
 
         Minecraft.getMinecraft().player.sendMessage(
-                new TextComponentString("§a掉落倍数切换为: §e" + newMultiplier)
-        );
+                new TextComponentString(
+                        (currentlyEnabled ? "§c倍数已关闭" : "§a倍数已开启")
+                                + " §7(当前 " + ModConfig.DROP_MULTIPLIER + "x)")
+                );
     }
 }

@@ -23,6 +23,7 @@ public class EventHandler {
     @SubscribeEvent
     public void onLivingDrops(LivingDropsEvent event) {
         if (!ModConfig.AFFECT_MOBS) return;
+        if (!ModConfig.MULTIPLIER_ENABLED) return;
 
         Entity entity = event.getEntity();
         if (!WhitelistManager.isAllowed(entity)) return;
@@ -38,6 +39,7 @@ public class EventHandler {
     @SubscribeEvent
     public void onBlockDrops(BlockEvent.HarvestDropsEvent event) {
         if (!ModConfig.AFFECT_BLOCKS) return;
+        if (!ModConfig.MULTIPLIER_ENABLED) return;
 
         if (!WhitelistManager.isAllowed(event.getState().getBlock())) return;
 
@@ -51,6 +53,7 @@ public class EventHandler {
     @SubscribeEvent
     public void onLootTableLoad(LootTableLoadEvent event) {
         if (!ModConfig.AFFECT_LOOT) return;
+        if (!ModConfig.MULTIPLIER_ENABLED) return;
 
         ResourceLocation name = event.getName();
         if (!WhitelistManager.isAllowed(name.toString())) return;
@@ -88,6 +91,7 @@ public class EventHandler {
     @SubscribeEvent
     public void onEntityJoinWorld(EntityJoinWorldEvent event) {
         if (!ModConfig.AFFECT_EXP) return;
+        if (!ModConfig.MULTIPLIER_ENABLED) return;
 
         if (event.getEntity() instanceof EntityXPOrb) {
             EntityXPOrb xpOrb = (EntityXPOrb) event.getEntity();
