@@ -1,0 +1,16 @@
+[
+{
+  "modid": "dropmultiplier",
+  "name": "Drop Multiplier",
+  "description": "A mod that can modify the drop rate multiplier.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Lmst_myh"],
+  "credits": "The Forge and The author Lmst_myh",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

@@ -1,0 +1,8 @@
+dropmultiplier.title=掉落倍数
+dropmultiplier.general=常规设置
+dropmultiplier.config.multiplier=掉落倍数
+dropmultiplier.config.affectExp=影响经验值
+dropmultiplier.config.affectMobs=影响生物掉落
+dropmultiplier.config.affectBlocks=影响方块掉落
+dropmultiplier.config.affectLoot=影响战利品
+key.dropmultiplier.toggle=切换倍数

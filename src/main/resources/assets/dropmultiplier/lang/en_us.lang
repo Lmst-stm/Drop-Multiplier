@@ -1,0 +1,8 @@
+dropmultiplier.title=Drop Multiplier
+dropmultiplier.general=General Settings
+dropmultiplier.config.multiplier=Drop Multiplier
+dropmultiplier.config.affectExp=Affect Experience
+dropmultiplier.config.affectMobs=Affect Mobs
+dropmultiplier.config.affectBlocks=Affect Blocks
+dropmultiplier.config.affectLoot=Affect Loot
+key.dropmultiplier.toggle=Toggle Multiplier
