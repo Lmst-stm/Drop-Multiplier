@@ -6,3 +6,4 @@ dropmultiplier.config.affectMobs=Affect Mobs
 dropmultiplier.config.affectBlocks=Affect Blocks
 dropmultiplier.config.affectLoot=Affect Loot
 key.dropmultiplier.toggle=Toggle Multiplier
+key.categories.dropmultiplier=Drop Multiplier

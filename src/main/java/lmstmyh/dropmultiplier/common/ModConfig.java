@@ -1,7 +1,12 @@
 package lmstmyh.dropmultiplier.common;
 
+import lmstmyh.dropmultiplier.DropMultiplier;
+import lmstmyh.dropmultiplier.network.MessageConfigSync;
+import lmstmyh.dropmultiplier.network.NetworkHandler;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -45,7 +50,7 @@ public class ModConfig {
                     Configuration.CATEGORY_GENERAL,
                     "multiplierEnabled",
                     true,
-                    "倍数是否启用 (按 . 键切换)"
+                    "倍数是否启用 (. 键切换)"
             );
             MULTIPLIER_ENABLED = enabledProp.getBoolean();
 
@@ -53,7 +58,7 @@ public class ModConfig {
                     Configuration.CATEGORY_GENERAL,
                     "affectExperience",
                     true,
-                    "是否影响经验值"
+                    "是否影响经验球"
             );
             AFFECT_EXP = expProp.getBoolean();
 
@@ -113,7 +118,7 @@ public class ModConfig {
     }
 
     public static void saveConfig() {
-        if (config != null && config.hasChanged()) {
+        if (config != null) {
             config.save();
         }
     }
@@ -130,5 +135,18 @@ public class ModConfig {
         Property prop = config.get(Configuration.CATEGORY_GENERAL, "multiplierEnabled", true);
         prop.set(enabled);
         saveConfig();
+    }
+
+    /**
+     * Sync current config to all connected clients.
+     * Call this after any server-side config change to keep clients in sync.
+     */
+    public static void syncToAll() {
+        if (FMLCommonHandler.instance().getEffectiveSide().isServer() ||
+                !FMLCommonHandler.instance().getMinecraftServerInstance().isDedicatedServer()) {
+            NetworkHandler.INSTANCE.sendToAll(
+                    new MessageConfigSync(MULTIPLIER_ENABLED, DROP_MULTIPLIER)
+            );
+        }
     }
 }

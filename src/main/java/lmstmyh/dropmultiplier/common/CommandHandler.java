@@ -20,20 +20,51 @@ public class CommandHandler extends CommandBase {
 
     @Override
     public String getUsage(ICommandSender sender) {
-        return "/dropmultiplier <倍数> 或 /dropmultiplier reset 或 /dropmultiplier info";
+        return "/dropmultiplier <倍数 | enable | disable | toggle | reset | info>";
+    }
+
+    @Override
+    public int getRequiredPermissionLevel() {
+        return 2; // OP权限
     }
 
     @Override
     public void execute(MinecraftServer server, ICommandSender sender, String[] args) throws CommandException {
         if (args.length == 0) {
             sender.sendMessage(new TextComponentString(
-                    "§a当前掉落倍数: §e" + ModConfig.DROP_MULTIPLIER
+                    "§a当前掉落倍数: §e" + ModConfig.DROP_MULTIPLIER +
+                            " §7| 状态: " + (ModConfig.MULTIPLIER_ENABLED ? "§a启用" : "§c禁用")
+            ));
+            return;
+        }
+
+        if (args[0].equalsIgnoreCase("enable")) {
+            ModConfig.setEnabled(true);
+            ModConfig.syncToAll();
+            sender.sendMessage(new TextComponentString("§a掉落倍数已启用"));
+            return;
+        }
+
+        if (args[0].equalsIgnoreCase("disable")) {
+            ModConfig.setEnabled(false);
+            ModConfig.syncToAll();
+            sender.sendMessage(new TextComponentString("§c掉落倍数已禁用"));
+            return;
+        }
+
+        if (args[0].equalsIgnoreCase("toggle")) {
+            boolean newState = !ModConfig.MULTIPLIER_ENABLED;
+            ModConfig.setEnabled(newState);
+            ModConfig.syncToAll();
+            sender.sendMessage(new TextComponentString(
+                    newState ? "§a掉落倍数已启用" : "§c掉落倍数已禁用"
             ));
             return;
         }
 
         if (args[0].equalsIgnoreCase("reset")) {
             ModConfig.setMultiplier(1.0);
+            ModConfig.syncToAll();
             sender.sendMessage(new TextComponentString("§a已重置为默认倍数: 1.0"));
             return;
         }
@@ -41,6 +72,7 @@ public class CommandHandler extends CommandBase {
         if (args[0].equalsIgnoreCase("info")) {
             sender.sendMessage(new TextComponentString("§a=== DropMultiplier 信息 ==="));
             sender.sendMessage(new TextComponentString("§a当前倍数: §e" + ModConfig.DROP_MULTIPLIER));
+            sender.sendMessage(new TextComponentString("§a启用状态: §e" + ModConfig.MULTIPLIER_ENABLED));
             sender.sendMessage(new TextComponentString("§a影响经验: §e" + ModConfig.AFFECT_EXP));
             sender.sendMessage(new TextComponentString("§a影响生物: §e" + ModConfig.AFFECT_MOBS));
             sender.sendMessage(new TextComponentString("§a影响方块: §e" + ModConfig.AFFECT_BLOCKS));
@@ -50,6 +82,7 @@ public class CommandHandler extends CommandBase {
             return;
         }
 
+        // Try parsing as number for set command
         try {
             double multiplier = Double.parseDouble(args[0]);
 
@@ -59,17 +92,13 @@ public class CommandHandler extends CommandBase {
             }
 
             ModConfig.setMultiplier(multiplier);
+            ModConfig.syncToAll();
             sender.sendMessage(new TextComponentString(
                     "§a掉落倍数已设置为: §e" + multiplier
             ));
 
         } catch (NumberFormatException e) {
-            sender.sendMessage(new TextComponentString("§c请输入有效的数字"));
+            sender.sendMessage(new TextComponentString("§c请输入有效的数字或子命令 (enable/disable/toggle/reset/info)"));
         }
-    }
-
-    @Override
-    public int getRequiredPermissionLevel() {
-        return 2; // OP权限
     }
 }

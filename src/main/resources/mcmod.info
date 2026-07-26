@@ -2,7 +2,7 @@
 {
   "modid": "dropmultiplier",
   "name": "Drop Multiplier",
-  "description": "A mod that can modify the drop rate multiplier.",
+  "description": "A mod that can modify the drop rate multiplier. Supports server-side config sync and network toggle.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
