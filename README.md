@@ -3,14 +3,14 @@
 An auxiliary mod that can modify the drop rate of game items — for players who want to
 slack off in casual play or challenge the limits of their graphics card.
 
-* **This branch**: Minecraft `1.15` · Forge `29.0.4` · mod `1.0.1`
+* **This branch**: Minecraft `1.15` · Forge `29.0.4` · mod `1.15-1.0.1`
 * **Requires**: Minecraft 1.15 + Forge 29.0.4 (or newer 1.15 build)
 
 ## Supported versions
 
 | Minecraft | Forge | Mod version | Status |
 |-----------|-------|-------------|--------|
-| 1.15 | 29.0.4 | 1.0.1 | OK |
+| 1.15 | 29.0.4 | 1.15-1.0.1 | OK |
 | 1.15.2 | 31.2.62 | 2.0.3 | OK |
 | 1.16.5 | 36.2.42 | 1.16.5-2.5.5 | OK |
 | 1.20.1 | 47.4.29 | 1.20.1-5.2.2 | OK |
@@ -26,7 +26,7 @@ slack off in casual play or challenge the limits of their graphics card.
 ## Install
 
 1. Install Minecraft 1.15 and Forge 29.0.4.
-2. Drop `dropmultiplier-1.0.1.jar` into `mods/` on the client **and** the server.
+2. Drop `dropmultiplier-1.15-1.0.1.jar` into `mods/` on the client **and** the server.
 3. Start the game / server once; the config is written to `config/dropmultiplier-server.toml`.
 
 ## Commands
@@ -57,7 +57,7 @@ slack off in casual play or challenge the limits of their graphics card.
 ```bash
 # JDK 8 is required
 ./gradlew build
-# -> build/libs/dropmultiplier-1.0.1.jar
+# -> build/libs/dropmultiplier-1.15-1.0.1.jar
 ```
 
 ## Versioning
