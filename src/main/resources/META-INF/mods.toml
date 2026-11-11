@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[32,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="dropmultiplier"
+version="1.16.1-2.1.1"
+displayName="Drop Multiplier"
+displayURL=""
+logoFile=""
+credits="The Forge and Taobao@liyu"
+authors="Taobao@liyu"
+description='''
+A mod that can modify the drop rate multiplier of mobs, blocks, loot tables and experience.
+Use "/dropmultiplier <multiplier>" command or press "." to toggle.
+'''
+[[dependencies.dropmultiplier]]
+    modId="forge"
+    mandatory=true
+    versionRange="[32,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.dropmultiplier]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.1]"
+    ordering="NONE"
+    side="BOTH"
