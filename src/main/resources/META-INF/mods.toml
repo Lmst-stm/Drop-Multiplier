@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[1.20.4,)"
+license="MIT"
+
+[[mods]]
+modId="dropmultiplier"
+version="1.20.4-1.0.0"
+displayName="Drop Multiplier"
+authors="Lmst_myh"
+credits="The Forge and Lmst_myh"
+description='''A mod that can modify the drop rate multiplier. Supports toggle key, commands, and whitelist/blacklist.'''
+
+[[dependencies.dropmultiplier]]
+    modId="forge"
+    mandatory=true
+    versionRange="[49.2.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.dropmultiplier]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.4]"
+    ordering="NONE"
+    side="BOTH"
