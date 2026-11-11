@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: dropmultiplier
+License: All Rights Reserved
+Implementation-Version: 1.16.5-2.5.4
+Specification-Vendor: lmstmyh
+Specification-Title: dropmultiplier
+Implementation-Timestamp: 2026-05-01T09:00:37+0800
+Specification-Version: 1
+Implementation-Vendor: lmstmyh
+
