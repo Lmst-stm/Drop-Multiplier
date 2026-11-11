@@ -1,0 +1,16 @@
+[
+{
+  "modid": "dropmultiplier",
+  "name": "Drop Multiplier",
+  "description": "A mod that can modify the drop rate multiplier. Supports toggle key, commands, and whitelist/blacklist.",
+  "version": "1.13.2-1.0.0",
+  "mcversion": "1.13.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Lmst_myh"],
+  "credits": "The Forge and Lmst_myh",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
