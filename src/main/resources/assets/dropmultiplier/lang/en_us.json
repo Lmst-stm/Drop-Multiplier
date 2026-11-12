@@ -1,0 +1,18 @@
+{
+  "key.categories.dropmultiplier": "Drop Multiplier",
+  "key.dropmultiplier.toggle": "Toggle Drop Multiplier",
+  "msg.dropmultiplier.no_permission": "You don't have permission to toggle drop multiplier",
+  "msg.dropmultiplier.query.multiplier": "Current multiplier: %s",
+  "msg.dropmultiplier.query.enabled": "Multiplier enabled: %s",
+  "msg.dropmultiplier.set": "Multiplier set to: %s",
+  "msg.dropmultiplier.enabled": "Multiplier enabled!",
+  "msg.dropmultiplier.disabled": "Multiplier disabled!",
+  "msg.dropmultiplier.reset": "Multiplier reset to %s",
+  "msg.dropmultiplier.info.header": "--- DropMultiplier Info ---",
+  "msg.dropmultiplier.info.exp": "Affect EXP: %s",
+  "msg.dropmultiplier.info.mobs": "Affect Mobs: %s",
+  "msg.dropmultiplier.info.blocks": "Affect Blocks: %s",
+  "msg.dropmultiplier.info.loot": "Affect Loot: %s",
+  "msg.dropmultiplier.info.whitelist_size": "Whitelist entries: %s",
+  "msg.dropmultiplier.info.blacklist_size": "Blacklist entries: %s"
+}
