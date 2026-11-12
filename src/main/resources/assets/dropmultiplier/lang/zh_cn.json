@@ -1,0 +1,26 @@
+{
+    "dropmultiplier.title": "掉落倍数",
+    "dropmultiplier.general": "常规设置",
+    "dropmultiplier.config.multiplier": "掉落倍数",
+    "dropmultiplier.config.affectExp": "影响经验值",
+    "dropmultiplier.config.affectMobs": "影响生物掉落",
+    "dropmultiplier.config.affectBlocks": "影响方块掉落",
+    "dropmultiplier.config.affectLoot": "影响战利品",
+    "key.dropmultiplier.toggle": "切换倍数",
+    "key.categories.dropmultiplier": "掉落倍数",
+
+    "msg.dropmultiplier.query.multiplier": "§a当前掉落倍数: §e%s",
+    "msg.dropmultiplier.query.enabled": "§a倍数开关: §e%s",
+    "msg.dropmultiplier.set": "§a掉落倍数已设置为: §e%s",
+    "msg.dropmultiplier.enabled": "§a掉落倍数已开启",
+    "msg.dropmultiplier.disabled": "§c掉落倍数已关闭",
+    "msg.dropmultiplier.reset": "§a已重置为默认倍数: %s",
+    "msg.dropmultiplier.info.header": "§a=== DropMultiplier 信息 ===",
+    "msg.dropmultiplier.info.exp": "§a影响经验: §e%s",
+    "msg.dropmultiplier.info.mobs": "§a影响生物: §e%s",
+    "msg.dropmultiplier.info.blocks": "§a影响方块: §e%s",
+    "msg.dropmultiplier.info.loot": "§a影响战利品: §e%s",
+    "msg.dropmultiplier.info.whitelist_size": "§a白名单数量: §e%s",
+    "msg.dropmultiplier.info.blacklist_size": "§a黑名单数量: §e%s",
+    "msg.dropmultiplier.no_permission": "§e按键只能触发服务器命令，请确保你有 OP 权限"
+}
