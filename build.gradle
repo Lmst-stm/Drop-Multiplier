@@ -1,0 +1,28 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.107'
+}
+
+neoForge {
+    version = "21.11.48"
+    mods {
+        dropmultiplier {
+            sourceSet sourceSets.main
+        }
+    }
+    runs {
+        server {
+            server()
+            programArguments.addAll '--nogui'
+        }
+        client {
+            client()
+        }
+    }
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+version = '1.0.1'
+group = 'lmstmyh.dropmultiplier'
+base { archivesName = 'dropmultiplier' }
