@@ -1,0 +1,26 @@
+{
+    "dropmultiplier.title": "Drop Multiplier",
+    "dropmultiplier.general": "General Settings",
+    "dropmultiplier.config.multiplier": "Drop Multiplier",
+    "dropmultiplier.config.affectExp": "Affect Experience",
+    "dropmultiplier.config.affectMobs": "Affect Mobs",
+    "dropmultiplier.config.affectBlocks": "Affect Blocks",
+    "dropmultiplier.config.affectLoot": "Affect Loot",
+    "key.dropmultiplier.toggle": "Toggle Multiplier",
+    "key.categories.dropmultiplier": "Drop Multiplier",
+
+    "msg.dropmultiplier.query.multiplier": "§aCurrent multiplier: §e%s",
+    "msg.dropmultiplier.query.enabled": "§aEnabled: §e%s",
+    "msg.dropmultiplier.set": "§aDrop multiplier set to: §e%s",
+    "msg.dropmultiplier.enabled": "§aDrop multiplier enabled",
+    "msg.dropmultiplier.disabled": "§cDrop multiplier disabled",
+    "msg.dropmultiplier.reset": "§aDrop multiplier reset to default: %s",
+    "msg.dropmultiplier.info.header": "§a=== Drop Multiplier Info ===",
+    "msg.dropmultiplier.info.exp": "§aAffects experience: §e%s",
+    "msg.dropmultiplier.info.mobs": "§aAffects mobs: §e%s",
+    "msg.dropmultiplier.info.blocks": "§aAffects blocks: §e%s",
+    "msg.dropmultiplier.info.loot": "§aAffects loot: §e%s",
+    "msg.dropmultiplier.info.whitelist_size": "§aWhitelist entries: §e%s",
+    "msg.dropmultiplier.info.blacklist_size": "§aBlacklist entries: §e%s",
+    "msg.dropmultiplier.no_permission": "§eKey can only trigger server commands, make sure you have OP permission"
+}
