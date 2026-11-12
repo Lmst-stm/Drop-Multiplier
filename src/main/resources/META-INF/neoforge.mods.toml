@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+[[mods]]
+modId="dropmultiplier"
+version="1.21.5-1.0.1"
+displayName="Drop Multiplier"
+authors="Lmst_myh"
+description='''An auxiliary mod that can modify the drop rate of game items.'''
+[[dependencies.dropmultiplier]]
+modId="neoforge"
+type="required"
+versionRange="[21.5,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.dropmultiplier]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.5,1.21.5]"
+ordering="NONE"
+side="BOTH"
