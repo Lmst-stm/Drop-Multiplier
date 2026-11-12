@@ -3,8 +3,8 @@
 An auxiliary mod that can modify the drop rate of game items — for players who want to
 slack off in casual play or challenge the limits of their graphics card.
 
-* **This branch**: Minecraft `1.21.8` · Forge `NeoForge 21.8.57` · mod `1.21.8-1.0.1`
-* **Requires**: Minecraft 1.21.8 + Forge NeoForge 21.8.57 (or a newer 1.21.8 build)
+* **This branch**: Minecraft `1.21.8` · NeoForge `21.8.57` · mod `1.21.8-1.0.1`
+* **Requires**: Minecraft 1.21.8 + NeoForge 21.8.57 (or a newer 1.21.8 build)
 
 ## Supported versions
 
